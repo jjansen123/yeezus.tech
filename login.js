@@ -29,11 +29,13 @@ button.addEventListener("click", async () => {
             const fileUrl = "media/skibidi.png"; // Make sure this file exists
             const randomName = randomFileName() + ".png"; // 6-char random name
             const a = document.createElement("a");
+            alert("License is valid!");
             a.href = fileUrl;
             a.download = randomName;
             document.body.appendChild(a);
             a.click();
             document.body.removeChild(a);
+            window.location.reload();
         } else {
             alert("License is invalid!");
             window.location.reload();
